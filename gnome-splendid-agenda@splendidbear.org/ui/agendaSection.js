@@ -7,6 +7,7 @@ import St from 'gi://St';
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import {formatTime} from 'resource:///org/gnome/shell/misc/dateUtils.js';
+import {gettext as _, ngettext} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {AvailabilityLine} from './availabilityLine.js';
 import {LiveEventBackdrop} from './liveEventBackdrop.js';
@@ -178,10 +179,10 @@ class AgendaSection extends St.Button {
     _dayTitle() {
         const today = new Date();
         if (sameDay(this._day, today))
-            return 'Today';
+            return _('Today');
         const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
         if (sameDay(this._day, tomorrow))
-            return 'Tomorrow';
+            return _('Tomorrow');
         return new Intl.DateTimeFormat(undefined, {
             weekday: 'long', month: 'short', day: 'numeric',
         }).format(this._day);
@@ -196,7 +197,7 @@ class AgendaSection extends St.Button {
 
     _eventTime(event) {
         if (isAllDay(event))
-            return 'All day';
+            return _('All day');
         return `${formatTime(event.date, {timeOnly: true})} – ${formatTime(event.end, {timeOnly: true})}`;
     }
 
@@ -219,15 +220,16 @@ class AgendaSection extends St.Button {
             this._timeline.setEvents(this._day, []);
             this._timeline.hide();
             this._rangeLabels.hide();
-            this._count.text = 'Loading…';
-            this._addPlaceholder('Loading events…');
+            this._count.text = _('Loading…');
+            this._addPlaceholder(_('Loading events…'));
             return;
         }
 
         const end = new Date(this._day.getFullYear(), this._day.getMonth(), this._day.getDate() + 1);
         const events = this._eventSource.getEvents(this._day, end);
         const timedCount = events.filter(event => !isAllDay(event)).length;
-        this._count.text = `${timedCount} timed · ${events.length} total`;
+        // Translators: first number is timed events, second is all events.
+        this._count.text = _('%d timed · %d total').format(timedCount, events.length);
         this._timeline.setEvents(this._day, events);
         const showTimeline = this._settings.get_boolean('show-timeline');
         this._timeline.visible = showTimeline;
@@ -239,7 +241,7 @@ class AgendaSection extends St.Button {
         this._rangeEnd.text = rangeEnd;
 
         if (events.length === 0) {
-            this._addPlaceholder('No events');
+            this._addPlaceholder(_('No events'));
             this._sync();
             return;
         }
@@ -303,13 +305,13 @@ class AgendaSection extends St.Button {
                     x_expand: true,
                 });
                 liveStatus.add_child(new St.Label({
-                    text: 'Now',
+                    text: _('Now'),
                     style_class: 'splendid-agenda-live-now',
                     x_expand: true,
                     x_align: Clutter.ActorAlign.START,
                 }));
                 liveStatus.add_child(new St.Label({
-                    text: `Ends in ${timeUntilEnd(event)}`,
+                    text: _('Ends in %s').format(timeUntilEnd(event, new Date(), ngettext)),
                     style_class: 'splendid-agenda-live-remaining',
                     x_align: Clutter.ActorAlign.END,
                 }));
@@ -331,13 +333,13 @@ class AgendaSection extends St.Button {
         });
         const heading = new St.BoxLayout({x_expand: true, clip_to_allocation: true});
         const title = new St.Label({
-            text: `${events.length} all-day ${events.length === 1 ? 'event' : 'events'}`,
+            text: ngettext('%d all-day event', '%d all-day events', events.length).format(events.length),
             style_class: 'event-summary',
             x_expand: true,
             x_align: Clutter.ActorAlign.START,
         });
         const marker = new St.Label({
-            text: 'All day',
+            text: _('All day'),
             style_class: 'event-time splendid-agenda-event-time',
             x_align: Clutter.ActorAlign.END,
             y_align: Clutter.ActorAlign.CENTER,
@@ -376,7 +378,7 @@ class AgendaSection extends St.Button {
         summary.clutter_text.single_line_mode = true;
         row.add_child(summary);
         row.add_child(new St.Label({
-            text: 'All day',
+            text: _('All day'),
             style_class: 'event-time splendid-agenda-event-time',
             x_align: Clutter.ActorAlign.END,
             y_align: Clutter.ActorAlign.CENTER,

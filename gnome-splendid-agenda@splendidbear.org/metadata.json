@@ -4,6 +4,6 @@
   "description": "Replaces GNOME Shell's agenda card with a one-day timeline while retaining GNOME Calendar integration.",
   "shell-version": ["51"],
   "settings-schema": "org.gnome.shell.extensions.gnome-splendid-agenda",
-  "version": 1,
-  "url": "https://www.splendidbear.org"
+  "gettext-domain": "gnome-splendid-agenda",
+  "url": "https://github.com/7system7/splendid-gnome-agenda"
 }

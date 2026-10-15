@@ -1,0 +1,130 @@
+# Hungarian translations for Splendid Agenda.
+msgid ""
+msgstr ""
+"Project-Id-Version: Splendid Agenda\n"
+"Report-Msgid-Bugs-To: https://github.com/7system7/splendid-gnome-agenda/"
+"issues\n"
+"POT-Creation-Date: 2026-10-15 10:55+0200\n"
+"PO-Revision-Date: 2026-10-15 00:00+0000\n"
+"Last-Translator: Splendid Agenda contributors\n"
+"Language-Team: Hungarian\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gnome-splendid-agenda@splendidbear.org/extension.js:12
+msgid ""
+"The GNOME Shell date menu layout is not compatible with Splendid Agenda."
+msgstr ""
+"A GNOME Shell dátummenüjének elrendezése nem kompatibilis a Splendid Agenda "
+"bővítménnyel."
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:10
+msgid "Agenda"
+msgstr "Napirend"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:14
+msgid "Events"
+msgstr "Események"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:15
+msgid "Choose how events are presented in the clock menu."
+msgstr "Válassza ki, hogyan jelenjenek meg az események az óra menüjében."
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:18
+msgid "Group all-day events"
+msgstr "Egész napos események csoportosítása"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:19
+msgid "Show all all-day events in one compact summary row"
+msgstr "Az egész napos események megjelenítése egyetlen tömör összesítő sorban"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:22
+msgid "Dim past events"
+msgstr "Elmúlt események halványítása"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:23
+msgid "De-emphasize events that have already ended"
+msgstr "A már befejeződött események halványabb megjelenítése"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:40
+msgid "Pulse ongoing event borders"
+msgstr "Folyamatban lévő események szegélyének animált kiemelése"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:41
+msgid "Animate “Now” event borders when system animations are enabled"
+msgstr ""
+"A „Most” események szegélyének animálása, ha a rendszeranimációk "
+"engedélyezve vannak"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:44
+msgid "Show availability line"
+msgstr "Idővonal megjelenítése"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:45
+msgid "Show the daily timeline and its time labels"
+msgstr "A napi idővonal és az időpontfeliratok megjelenítése"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:182
+msgid "Today"
+msgstr "Ma"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:185
+msgid "Tomorrow"
+msgstr "Holnap"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:200
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:342
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:381
+msgid "All day"
+msgstr "Egész nap"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:223
+msgid "Loading…"
+msgstr "Betöltés…"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:224
+msgid "Loading events…"
+msgstr "Események betöltése…"
+
+#. Translators: first number is timed events, second is all events.
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:232
+#, javascript-format
+msgid "%d timed · %d total"
+msgstr "%d időzített · összesen %d"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:244
+msgid "No events"
+msgstr "Nincsenek események"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:308
+msgid "Now"
+msgstr "Most"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:314
+#, javascript-format
+msgid "Ends in %s"
+msgstr "Véget ér: %s múlva"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:336
+#, javascript-format
+msgid "%d all-day event"
+msgid_plural "%d all-day events"
+msgstr[0] "%d egész napos esemény"
+msgstr[1] "%d egész napos esemény"
+
+#: gnome-splendid-agenda@splendidbear.org/utils/eventUtils.js:47
+#, javascript-format
+msgid "%d min"
+msgid_plural "%d mins"
+msgstr[0] "%d perc"
+msgstr[1] "%d perc"
+
+#: gnome-splendid-agenda@splendidbear.org/utils/eventUtils.js:49
+#, javascript-format
+msgid "%d hr"
+msgid_plural "%d hrs"
+msgstr[0] "%d óra"
+msgstr[1] "%d óra"

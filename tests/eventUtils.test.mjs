@@ -41,6 +41,23 @@ test('colors are stable and fall back to the event summary', () => {
     assert.deepEqual(eventColor({id: 'meeting'}), eventColor({summary: 'meeting'}));
 });
 
+test('remaining time translates units and passes the count to plural selection', () => {
+    const meeting = event(date(15, 9), date(15, 12));
+    const calls = [];
+    const translate = (singular, plural, count) => {
+        calls.push([singular, plural, count]);
+        return singular === '%d min' ? '%d perc' : '%d óra';
+    };
+    assert.equal(timeUntilEnd(meeting, date(15, 11, 59), translate), '1 perc');
+    assert.equal(timeUntilEnd(meeting, date(15, 11, 30), translate), '30 perc');
+    assert.equal(timeUntilEnd(meeting, date(15, 10), translate), '2 óra');
+    assert.deepEqual(calls, [
+        ['%d min', '%d mins', 1],
+        ['%d min', '%d mins', 30],
+        ['%d hr', '%d hrs', 2],
+    ]);
+});
+
 test('timeline defaults to 08:00–17:00 and ignores all-day events', () => {
     assert.deepEqual(timelineRange(date(15), []), [date(15, 8), date(15, 17)]);
     assert.deepEqual(timelineRange(date(15), [event(date(15), date(16))]),

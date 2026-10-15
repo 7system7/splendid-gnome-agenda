@@ -1,4 +1,4 @@
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
 import {AgendaSection} from './ui/agendaSection.js';
@@ -9,7 +9,7 @@ export default class GnomeSplendidAgendaExtension extends Extension {
         const original = dateMenu?._eventsItem;
         const parent = original?.get_parent();
         if (!dateMenu || !original || !parent || !dateMenu._calendar || !dateMenu._eventSource)
-            throw new Error('The GNOME Shell date menu layout is not compatible with Splendid Agenda.');
+            throw new Error(_('The GNOME Shell date menu layout is not compatible with Splendid Agenda.'));
 
         this._dateMenu = dateMenu;
         this._original = original;

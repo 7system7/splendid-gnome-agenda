@@ -40,12 +40,13 @@ export function isPast(event, now = new Date()) {
     return event.end <= now;
 }
 
-export function timeUntilEnd(event, now = new Date()) {
+export function timeUntilEnd(event, now = new Date(),
+    ngettext = (singular, plural, count) => count === 1 ? singular : plural) {
     const minutes = Math.max(1, Math.ceil((event.end - now) / 60_000));
     if (minutes < 60)
-        return `${minutes} ${minutes === 1 ? 'min' : 'mins'}`;
+        return ngettext('%d min', '%d mins', minutes).replace('%d', minutes);
     const hours = Math.ceil(minutes / 60);
-    return `${hours} ${hours === 1 ? 'hr' : 'hrs'}`;
+    return ngettext('%d hr', '%d hrs', hours).replace('%d', hours);
 }
 
 export function timelineRange(day, events) {

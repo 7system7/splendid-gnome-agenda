@@ -11,7 +11,7 @@ see its events. Disabling the extension restores GNOME's built-in agenda.
 
 ## Install
 
-Requires **GNOME Shell 51**, Git, GNU Make, and the GNOME Shell extension and GLib
+Requires **GNOME Shell 51**, Git, GNU Make, GNU gettext, and the GNOME Shell extension and GLib
 tools. You can check your GNOME version in **Settings → System → About**.
 
 1. Open Terminal and paste these commands, one at a time:
@@ -52,6 +52,9 @@ All options are enabled by default and changes apply immediately.
 
 Calendar accounts and calendar visibility are managed in GNOME.
 
+The interface follows your desktop language. English and Hungarian are included;
+other languages fall back to English.
+
 ## Manage the extension
 
 | Command | What it does |
@@ -74,6 +77,11 @@ your distribution's software manager and try again.
 `make check` checks JavaScript syntax, validates settings, and runs tests; it
 requires Node.js. Use `make test` for tests only and `make pack` to create a ZIP
 in the `build` folder.
+
+Translations live in the extension's `po` folder. Run `make translations` to
+refresh the template and catalogs after changing interface text. Edit `en.po`
+or `hu.po`, then run `make check` to validate them. `make pack` and `make install`
+automatically compile and include the translations.
 
 For a nested test desktop, run `make install`, then `make isolated` (requires
 Mutter Devkit support). Run `make enable` and `make info` from a terminal **inside

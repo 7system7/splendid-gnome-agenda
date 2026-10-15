@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Splendid Agenda package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Splendid Agenda\n"
+"Report-Msgid-Bugs-To: https://github.com/7system7/splendid-gnome-agenda/"
+"issues\n"
+"POT-Creation-Date: 2026-10-15 10:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: gnome-splendid-agenda@splendidbear.org/extension.js:12
+msgid ""
+"The GNOME Shell date menu layout is not compatible with Splendid Agenda."
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:10
+msgid "Agenda"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:14
+msgid "Events"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:15
+msgid "Choose how events are presented in the clock menu."
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:18
+msgid "Group all-day events"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:19
+msgid "Show all all-day events in one compact summary row"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:22
+msgid "Dim past events"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:23
+msgid "De-emphasize events that have already ended"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:40
+msgid "Pulse ongoing event borders"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:41
+msgid "Animate “Now” event borders when system animations are enabled"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:44
+msgid "Show availability line"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:45
+msgid "Show the daily timeline and its time labels"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:182
+msgid "Today"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:185
+msgid "Tomorrow"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:200
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:342
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:381
+msgid "All day"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:223
+msgid "Loading…"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:224
+msgid "Loading events…"
+msgstr ""
+
+#. Translators: first number is timed events, second is all events.
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:232
+#, javascript-format
+msgid "%d timed · %d total"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:244
+msgid "No events"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:308
+msgid "Now"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:314
+#, javascript-format
+msgid "Ends in %s"
+msgstr ""
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:336
+#, javascript-format
+msgid "%d all-day event"
+msgid_plural "%d all-day events"
+msgstr[0] ""
+msgstr[1] ""
+
+#: gnome-splendid-agenda@splendidbear.org/utils/eventUtils.js:47
+#, javascript-format
+msgid "%d min"
+msgid_plural "%d mins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: gnome-splendid-agenda@splendidbear.org/utils/eventUtils.js:49
+#, javascript-format
+msgid "%d hr"
+msgid_plural "%d hrs"
+msgstr[0] ""
+msgstr[1] ""

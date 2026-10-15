@@ -1,0 +1,127 @@
+# English translations for Splendid Agenda.
+msgid ""
+msgstr ""
+"Project-Id-Version: Splendid Agenda\n"
+"Report-Msgid-Bugs-To: https://github.com/7system7/splendid-gnome-agenda/"
+"issues\n"
+"POT-Creation-Date: 2026-10-15 10:55+0200\n"
+"PO-Revision-Date: 2026-10-15 00:00+0000\n"
+"Last-Translator: Splendid Agenda contributors\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gnome-splendid-agenda@splendidbear.org/extension.js:12
+msgid ""
+"The GNOME Shell date menu layout is not compatible with Splendid Agenda."
+msgstr ""
+"The GNOME Shell date menu layout is not compatible with Splendid Agenda."
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:10
+msgid "Agenda"
+msgstr "Agenda"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:14
+msgid "Events"
+msgstr "Events"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:15
+msgid "Choose how events are presented in the clock menu."
+msgstr "Choose how events are presented in the clock menu."
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:18
+msgid "Group all-day events"
+msgstr "Group all-day events"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:19
+msgid "Show all all-day events in one compact summary row"
+msgstr "Show all all-day events in one compact summary row"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:22
+msgid "Dim past events"
+msgstr "Dim past events"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:23
+msgid "De-emphasize events that have already ended"
+msgstr "De-emphasize events that have already ended"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:40
+msgid "Pulse ongoing event borders"
+msgstr "Pulse ongoing event borders"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:41
+msgid "Animate “Now” event borders when system animations are enabled"
+msgstr "Animate “Now” event borders when system animations are enabled"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:44
+msgid "Show availability line"
+msgstr "Show availability line"
+
+#: gnome-splendid-agenda@splendidbear.org/prefs.js:45
+msgid "Show the daily timeline and its time labels"
+msgstr "Show the daily timeline and its time labels"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:182
+msgid "Today"
+msgstr "Today"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:185
+msgid "Tomorrow"
+msgstr "Tomorrow"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:200
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:342
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:381
+msgid "All day"
+msgstr "All day"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:223
+msgid "Loading…"
+msgstr "Loading…"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:224
+msgid "Loading events…"
+msgstr "Loading events…"
+
+#. Translators: first number is timed events, second is all events.
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:232
+#, javascript-format
+msgid "%d timed · %d total"
+msgstr "%d timed · %d total"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:244
+msgid "No events"
+msgstr "No events"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:308
+msgid "Now"
+msgstr "Now"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:314
+#, javascript-format
+msgid "Ends in %s"
+msgstr "Ends in %s"
+
+#: gnome-splendid-agenda@splendidbear.org/ui/agendaSection.js:336
+#, javascript-format
+msgid "%d all-day event"
+msgid_plural "%d all-day events"
+msgstr[0] "%d all-day event"
+msgstr[1] "%d all-day events"
+
+#: gnome-splendid-agenda@splendidbear.org/utils/eventUtils.js:47
+#, javascript-format
+msgid "%d min"
+msgid_plural "%d mins"
+msgstr[0] "%d min"
+msgstr[1] "%d mins"
+
+#: gnome-splendid-agenda@splendidbear.org/utils/eventUtils.js:49
+#, javascript-format
+msgid "%d hr"
+msgid_plural "%d hrs"
+msgstr[0] "%d hr"
+msgstr[1] "%d hrs"

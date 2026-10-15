@@ -7,13 +7,15 @@ BUILD_DIR := build
 PACKAGE := $(BUILD_DIR)/$(UUID).shell-extension.zip
 SCHEMA := schemas/org.gnome.shell.extensions.gnome-splendid-agenda.gschema.xml
 JS_FILES := $(wildcard $(EXTENSION_DIR)/*.js $(EXTENSION_DIR)/ui/*.js $(EXTENSION_DIR)/utils/*.js)
+PO_FILES := $(wildcard $(EXTENSION_DIR)/po/*.po)
 
-.PHONY: help check test pack install uninstall enable disable prefs info logs isolated clean
+.PHONY: help check test translations pack install uninstall enable disable prefs info logs isolated clean
 
 help:
 	@printf '%s\n' \
 	  'make check      Check JavaScript syntax, schema, and unit tests' \
 	  'make test       Run unit tests only' \
+	  'make translations Update the translation template and catalogs' \
 	  'make pack       Build the extension ZIP in build/' \
 	  'make install    Pack and install/update for the current user' \
 	  'make uninstall  Remove the extension for the current user' \
@@ -28,15 +30,24 @@ help:
 check:
 	@set -e; for file in $(JS_FILES); do node --check "$$file"; done
 	glib-compile-schemas --strict --dry-run "$(EXTENSION_DIR)/schemas"
+	@set -e; for file in $(PO_FILES); do msgfmt --check --check-format -o /dev/null "$$file"; done
 	$(MAKE) test
 
 test:
 	node --test tests/*.test.mjs
 
+translations:
+	xgettext --language=JavaScript --from-code=UTF-8 --keyword=_ --keyword=ngettext:1,2 \
+	  --add-comments=Translators --package-name='Splendid Agenda' \
+	  --msgid-bugs-address='https://github.com/7system7/splendid-gnome-agenda/issues' \
+	  --output="$(EXTENSION_DIR)/po/gnome-splendid-agenda.pot" $(JS_FILES)
+	@set -e; for file in $(PO_FILES); do msgmerge --update --backup=none "$$file" "$(EXTENSION_DIR)/po/gnome-splendid-agenda.pot"; done
+
 pack:
 	mkdir -p "$(BUILD_DIR)"
 	gnome-extensions pack --force --out-dir="$(BUILD_DIR)" \
 	  --extra-source=ui --extra-source=utils \
+	  --podir=po \
 	  --schema="$(SCHEMA)" "$(EXTENSION_DIR)"
 
 install: pack
