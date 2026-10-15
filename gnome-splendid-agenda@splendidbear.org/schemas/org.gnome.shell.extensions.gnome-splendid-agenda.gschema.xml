@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.gnome-splendid-agenda" path="/org/gnome/shell/extensions/gnome-splendid-agenda/">
+    <key name="group-all-day-events" type="b">
+      <default>true</default>
+      <summary>Group all-day events</summary>
+      <description>Display all-day events in one compact summary row instead of separate rows.</description>
+    </key>
+    <key name="dim-past-events" type="b">
+      <default>true</default>
+      <summary>Dim past events</summary>
+      <description>De-emphasize events that have ended while keeping current events fully highlighted.</description>
+    </key>
+    <key name="pulse-ongoing-events" type="b">
+      <default>true</default>
+      <summary>Pulse ongoing event borders</summary>
+      <description>Gently pulse the borders of ongoing events when system animations are enabled.</description>
+    </key>
+    <key name="show-timeline" type="b">
+      <default>true</default>
+      <summary>Show availability line</summary>
+      <description>Display the daily event timeline and its time labels above the event list.</description>
+    </key>
+  </schema>
+</schemalist>

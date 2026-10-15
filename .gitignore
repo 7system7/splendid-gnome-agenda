@@ -1,0 +1,11 @@
+# Generated build output and extension packages
+/build/
+*.shell-extension.zip
+
+# Compiled GSettings schemas
+**/schemas/gschemas.compiled
+
+# Editor temporary files
+*~
+*.swp
+*.swo

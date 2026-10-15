@@ -1,0 +1,153 @@
+.splendid-agenda {
+  min-width: 0;
+}
+
+.splendid-agenda-title {
+  padding-bottom: 0;
+}
+
+/* Reuse events-title for its theme-selected secondary color while retaining
+ * the native event-time size and weight for the added labels. */
+.events-button .events-box .splendid-agenda-count,
+.events-button .events-box .splendid-agenda-range-label {
+  padding-bottom: 0;
+  font-size: 0.818em;
+  font-weight: 400;
+}
+
+.splendid-agenda-timeline {
+  margin-top: 8px;
+}
+
+
+.splendid-agenda-range-label {
+  font-feature-settings: "tnum";
+}
+
+.splendid-agenda-events {
+  margin-top: 12px;
+  spacing: 6px;
+}
+
+.splendid-agenda-event {
+  padding: 8px 10px;
+  border-radius: 9px;
+  border: 1px solid rgba(127, 127, 127, 0.16);
+  background-color: rgba(127, 127, 127, 0.04);
+}
+
+.splendid-agenda-event.timed {
+  border-left: 3px solid #69d9c4;
+}
+
+.splendid-agenda-event.ongoing {
+  padding: 0;
+  border-color: rgba(105, 217, 196, 0.42);
+  border-left-color: #69d9c4;
+  background-color: rgba(105, 217, 196, 0.055);
+}
+
+.splendid-agenda-event.ongoing .splendid-agenda-event-content {
+  padding: 10px;
+}
+
+.splendid-agenda-event.all-day {
+  border-left: 3px solid rgba(127, 127, 127, 0.38);
+}
+
+.splendid-agenda-event.past {
+  border-color: rgba(127, 127, 127, 0.12);
+  border-left-color: rgba(127, 127, 127, 0.25);
+}
+
+.splendid-agenda-event-time {
+  padding-left: 12px;
+  font-feature-settings: "tnum";
+}
+
+.splendid-agenda-event.ongoing .event-summary,
+.splendid-agenda-event.ongoing .event-time,
+.splendid-agenda-live-now {
+  font-weight: 700;
+}
+
+.splendid-agenda-live-status {
+  padding-top: 6px;
+}
+
+.splendid-agenda-live-now,
+.splendid-agenda-live-remaining {
+  font-size: 0.818em;
+  font-feature-settings: "tnum";
+}
+
+.splendid-agenda-live-remaining {
+  font-weight: 600;
+}
+
+.splendid-agenda-all-day-names {
+  padding-top: 3px;
+  font-size: 0.818em;
+}
+
+/* Keep the native card foreground as the theme probe. These descendant
+ * colors also style the drawing areas; labels receive inline theme colors. */
+.splendid-agenda.light .events-box .event-summary,
+.splendid-agenda.light .events-box .event-time,
+.splendid-agenda.light .splendid-agenda-live-status,
+.splendid-agenda.light .splendid-agenda-timeline {
+  color: #303030;
+}
+
+.splendid-agenda.dark .events-box .event-summary,
+.splendid-agenda.dark .events-box .event-time,
+.splendid-agenda.dark .splendid-agenda-live-status,
+.splendid-agenda.dark .splendid-agenda-timeline {
+  color: #f6f5f4;
+}
+
+.splendid-agenda.light .events-box .splendid-agenda-count,
+.splendid-agenda.light .events-box .splendid-agenda-range-label,
+.splendid-agenda.light .events-box .splendid-agenda-all-day-names,
+.splendid-agenda.light .events-box .event-placeholder {
+  color: #5e5c64;
+}
+
+.splendid-agenda.dark .events-box .splendid-agenda-count,
+.splendid-agenda.dark .events-box .splendid-agenda-range-label,
+.splendid-agenda.dark .events-box .splendid-agenda-all-day-names,
+.splendid-agenda.dark .events-box .event-placeholder {
+  color: #c0bfbc;
+}
+
+.splendid-agenda.light .splendid-agenda-event {
+  border-color: rgba(0, 0, 0, 0.22);
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+.splendid-agenda.light .splendid-agenda-event.timed {
+  border-left-color: #087f6d;
+}
+
+.splendid-agenda.light .splendid-agenda-event.ongoing {
+  border-color: rgba(8, 127, 109, 0.55);
+  border-left-color: #087f6d;
+  background-color: rgba(8, 127, 109, 0.055);
+}
+
+.splendid-agenda.light .splendid-agenda-event.all-day {
+  border-left-color: #77767b;
+}
+
+.splendid-agenda.light .splendid-agenda-event.past {
+  border-color: rgba(0, 0, 0, 0.22);
+  border-left-color: #77767b;
+}
+
+.splendid-agenda.light .splendid-agenda-live-backdrop {
+  color: #087f6d;
+}
+
+.splendid-agenda.dark .splendid-agenda-live-backdrop {
+  color: #69d9c4;
+}
