@@ -20,9 +20,12 @@ function atMidnight(date) {
 }
 
 export function isAllDay(event) {
-    const duration = event.end - event.date;
+    const startDay = Date.UTC(
+        event.date.getFullYear(), event.date.getMonth(), event.date.getDate()) / DAY_MS;
+    const endDay = Date.UTC(
+        event.end.getFullYear(), event.end.getMonth(), event.end.getDate()) / DAY_MS;
     return atMidnight(event.date) && atMidnight(event.end) &&
-        duration >= DAY_MS && duration % DAY_MS === 0;
+        endDay > startDay;
 }
 
 export function eventColor(event) {

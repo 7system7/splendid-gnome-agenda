@@ -19,6 +19,10 @@ test('all-day detection requires midnight boundaries and full days', () => {
     assert.ok(!isAllDay(event(date(15), date(15))));
 });
 
+test('all-day detection uses calendar dates across daylight-saving changes', () => {
+    assert.ok(isAllDay(event(new Date(2026, 9, 25), new Date(2026, 9, 26))));
+});
+
 test('ongoing and past status respect event boundaries', () => {
     const meeting = event(date(15, 9), date(15, 10));
     assert.ok(!isOngoing(meeting, date(15, 8)));
